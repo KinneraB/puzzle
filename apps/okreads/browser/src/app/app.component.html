@@ -23,8 +23,12 @@
     <div class="reading-list-container" data-testing="reading-list-container">
       <h2>
         My Reading List
-        <button mat-icon-button (click)="drawer.close()">
-          <mat-icon>close</mat-icon>
+        <button
+        aria-label="Close Reading List"
+        mat-icon-button
+        (click)="drawer.close()"
+        >          
+        <mat-icon>close</mat-icon>
         </button>
       </h2>
       <div class="reading-list-content">
