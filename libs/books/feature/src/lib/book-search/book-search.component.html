@@ -37,14 +37,14 @@
           <p [innerHTML]="book.description"></p>
           <div>
             <button
+              data-testing="want-to-read-btn"
               mat-flat-button
               color="primary"
               (click)="addBookToReadingList(book)"
               [disabled]="book.isAdded"
               [attr.aria-label]="'Want to read ' + book.title"
             >
-              Want to Read
-            </button>
+            {{ book.finished ? 'Finished' : 'Want to Read' }}
           </div>
         </div>
       </div>
