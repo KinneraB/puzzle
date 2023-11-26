@@ -8,6 +8,8 @@ import { SharedTestingModule } from '@tmo/shared/testing';
 import { ReadingListEffects } from './reading-list.effects';
 import * as ReadingListActions from './reading-list.actions';
 import { API_PATH } from '../constants';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ToReadEffects', () => {
   let actions: ReplaySubject<any>;
@@ -16,7 +18,7 @@ describe('ToReadEffects', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [SharedTestingModule],
+      imports: [SharedTestingModule, MatSnackBarModule, NoopAnimationsModule],
       providers: [
         ReadingListEffects,
         provideMockActions(() => actions),
